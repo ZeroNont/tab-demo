@@ -111,7 +111,7 @@
 </template>
 <style>
 .main{
-  padding: 50px;
+  padding: 50px !important;
 }
 .btn-sumary {
   border: thin solid #0b499c !important ;
@@ -129,7 +129,7 @@ a{
 }
 .content{
   color: #000000 !important;
-  padding: 50px;
+  padding: 50px !important;
   border-radius: 20px !important;
 }
 .text-title{

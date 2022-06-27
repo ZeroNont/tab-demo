@@ -1,11 +1,41 @@
 <template>
-<v-card color="#ffffff" class="content">
+<v-card color="#ffffff" class="file-content">
   <v-row>
     <v-col>
-        <v-card color="transparent !important" class="content"></v-card>
+        <v-card outlined color="transparent" class="file-content">
+            <h3>All Files</h3>
+        <v-tabs
+          v-model="model"
+          centered
+        >
+        <v-tabs-slider color="#45a2db" style="margin-top: -10px;"></v-tabs-slider>
+          <v-tab :key="Dates">
+                    Date
+                </v-tab>
+                <v-tab :key="Name">
+                    Name
+                </v-tab>
+                <v-tab :key="Type">
+                    Type
+                </v-tab>
+        </v-tabs>
+     <v-tabs-items v-model="file" class="tabs-items">
+        <v-tab-item :key="Dates" class="custom-tab-items">
+        1
+        </v-tab-item>
+        <v-tab-item :key="Name" class="custom-tab-items">
+        2
+        </v-tab-item>
+         <v-tab-item :key="Type" class="custom-tab-items">
+        3
+        </v-tab-item>
+        </v-tabs-items>
+        </v-card>
     </v-col>
     <v-col>
-        <v-card color="#ffffff" class="content"></v-card>
+        <v-card outlined color="transparent" class="file-content">
+            <h3>Downloaded Files</h3>
+        </v-card>
     </v-col>
   </v-row>
 </v-card>
@@ -18,7 +48,7 @@
 </script>
 <style>
 .main{
-  padding: 50px;
+  padding: 20px;
 }
 .btn-sumary {
   border: thin solid #0b499c !important ;
@@ -33,8 +63,9 @@
   color: #000000 !important; 
   border-radius: 10px!important;
 }
-.content{
+.file-content{
   color: #000000 !important;
+  padding: 20px;
 }
 .text-title{
   max-width: 250px;
